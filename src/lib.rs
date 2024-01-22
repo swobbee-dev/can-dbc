@@ -296,7 +296,7 @@ pub struct Signal {
 
 /// CAN id in header of CAN frame.
 /// Must be unique in DBC file.
-#[derive(Copy, Clone, Debug, PartialEq)]
+#[derive(Copy, Clone, Debug, PartialEq, Eq, Hash)]
 #[cfg_attr(feature = "serde", derive(Serialize))]
 pub enum MessageId {
     Standard(u16),
